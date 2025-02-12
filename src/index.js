@@ -76,18 +76,23 @@ function displayRamens() {
 };
 
 const main = () => {
-  // Invoke addSubmitListener here
-  let callSubmit = document.getElementById('submit-button');
-  callSubmit.addEventListener('click', () => addSubmitListener());
+
+  let formSubmit = document.getElementById('new-ramen');
+  formSubmit.addEventListener('submit', function(e) {
+    e.preventDefault();
+    addSubmitListener();
+  });
 
   displayRamens();
 }
 main();
 
-// Export functions for testing
 export {
   displayRamens,
   addSubmitListener,
   handleClick,
   main,
 };
+
+addEventListener
+addSubmitListener
